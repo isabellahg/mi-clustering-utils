@@ -1,5 +1,15 @@
 # Scripts
 
+1. **Epsilon Refinement**: Analiza resultados de clustering para ajustar automáticamente el valor de epsilon y generar nuevas configuraciones de clustering.
+
+1. **Generador de Métricas y Gráficos**: Script para procesar y analizar datos de clustering, generar métricas promedio y visualizaciones, y consolidar los resultados en Excel y PDF.
+
+
+
+3. **Análisis y Visualización de Distancias en Clustering**: Procesa archivos Excel con datos precalculados de k distancias en clustering, genera gráficos de dispersión para 'minPoints' y actualiza los archivos Excel con estas visualizaciones.
+
+
+
 ## epsilon-refinement
 
 Este script en Python está diseñado para analizar y refinar los parámetros de configuración de algoritmos de clustering, específicamente el valor de epsilon, basado en los resultados de ejecuciones iniciales.
@@ -86,3 +96,46 @@ Para ejecutar este script, asegúrate de tener instalados los siguientes paquete
 - `calculate_global_averages(all_executions)`: Calcula promedios globales de métricas.
 - `seed_average(data)`: Calcula promedios removiendo semillas de configuraciones.
 - `generate_boxplots_and_save(all_executions)`: Genera y guarda gráficos de cajas.
+
+
+## k-distance-plots
+
+Este script en Python está diseñado para analizar archivos Excel que contienen las k distancias ya calculadas en tareas de clustering. Su propósito es generar visualizaciones para cada configuración de 'minPoints', con el objetivo de facilitar la identificación del valor óptimo de epsilon. Posteriormente, añade estas visualizaciones a los archivos Excel originales.
+
+### Funcionalidades
+
+- Lectura de archivos Excel con datos precalculados de k distancias en clustering.
+- Generación de gráficos de dispersión para distintos valores de 'minPoints', basados en las k distancias.
+- Inserción de estos gráficos en los archivos Excel correspondientes para una visualización detallada.
+
+### Requisitos
+
+Para ejecutar este script, asegúrate de tener instalados los siguientes paquetes de Python:
+
+- pandas
+- matplotlib
+- openpyxl
+- glob
+
+### Estructura del Script
+
+El script se compone de varias funciones clave:
+
+- `analyze_and_write_plot(sheet_name, book, newBook, file_path, file_path_new)`: Analiza los datos de k distancias en una hoja de cálculo y genera un gráfico, el cual se inserta en el mismo archivo Excel.
+- El script procesa todos los archivos Excel en el directorio especificado y guarda las versiones modificadas en un nuevo directorio.
+
+### Uso
+
+1. Coloca tus archivos Excel con datos de k distancias en el directorio especificado en la variable `file_path`.
+2. Ejecuta el script. Esto generará gráficos para cada configuración de 'minPoints' y los añadirá a los archivos Excel.
+3. Los archivos Excel modificados se guardarán en el directorio especificado en `result_path`.
+
+### Proceso de Análisis
+
+El script realiza los siguientes pasos:
+
+1. Identifica y procesa todos los archivos Excel en el directorio especificado.
+2. Por cada hoja en cada archivo, analiza los datos de las k distancias.
+3. Genera un gráfico de dispersión para cada valor de 'minPoints'.
+4. Inserta los gráficos generados en el archivo Excel correspondiente.
+5. Guarda el archivo Excel modificado en un nuevo directorio.
