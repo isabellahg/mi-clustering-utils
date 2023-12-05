@@ -1,11 +1,20 @@
 import glob
 import matplotlib.pyplot as plt
 from io import BytesIO
+import numpy as np
 from openpyxl import load_workbook
 from openpyxl.drawing.image import Image
 import pandas as pd
 import openpyxl
+from kneebow.rotor import Rotor
 
+def get_eps(distances):
+    # Assuming distances is a sorted 1D numpy array of distances
+    curve_xy = np.vstack((np.arange(len(distances)), distances)).T
+    rotor = Rotor()
+    rotor.fit_rotate(curve_xy)
+    _, knee_y = rotor.get_elbow_point()
+    return knee_y
 
 def analyze_and_write_plot(sheet_name, book, newBook, file_path, file_path_new):
     df = pd.read_excel(file_path, sheet_name=sheet_name, header=None)
@@ -26,6 +35,10 @@ def analyze_and_write_plot(sheet_name, book, newBook, file_path, file_path_new):
 
         elif pd.isnull(value) and scatter_data:
             print(scatter_data)
+
+            scatter_data = np.sort(np.array(scatter_data))
+            eps = get_eps(scatter_data)
+            config = f'-E {eps:.2f} -M {current_minpoints} -D {euclidean}'
             plt.figure()
             plt.scatter(range(len(scatter_data)), scatter_data)
             plt.title(f'Scatter Plot for {current_minpoints}')

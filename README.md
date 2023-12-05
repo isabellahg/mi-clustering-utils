@@ -1,56 +1,8 @@
 # Scripts
 
-1. **Epsilon Refinement**: Analiza resultados de clustering para ajustar automáticamente el valor de epsilon y generar nuevas configuraciones de clustering.
-
 1. **Generador de Métricas y Gráficos**: Script para procesar y analizar datos de clustering, generar métricas promedio y visualizaciones, y consolidar los resultados en Excel y PDF.
+2. **Análisis y Visualización de Distancias en Clustering**: Procesa archivos Excel con datos precalculados de k distancias en clustering, genera gráficos de dispersión para 'minPoints' y actualiza los archivos Excel con estas visualizaciones.
 
-
-
-3. **Análisis y Visualización de Distancias en Clustering**: Procesa archivos Excel con datos precalculados de k distancias en clustering, genera gráficos de dispersión para 'minPoints' y actualiza los archivos Excel con estas visualizaciones.
-
-
-
-## epsilon-refinement
-
-Este script en Python está diseñado para analizar y refinar los parámetros de configuración de algoritmos de clustering, específicamente el valor de epsilon, basado en los resultados de ejecuciones iniciales.
-
-### Funcionalidades
-
-- Análisis de resultados de clustering para identificar configuraciones que requieren ajuste.
-- Ajuste automático del valor de epsilon para mejorar la formación de clusters.
-- Generación de nuevas configuraciones de clustering basadas en el análisis.
-
-### Requisitos
-
-Para ejecutar este script, asegúrate de tener instalados los siguientes paquetes de Python:
-
-- pandas
-- numpy
-- os
-- re
-
-### Estructura del Script
-
-El script consta de varias funciones clave:
-
-- `get_new_config(configuration, scale)`: Ajusta el valor de epsilon en la configuración dada, según el factor de escala proporcionado.
-- `refine_epsilon()`: Lee los resultados de clustering de un archivo CSV, analiza el número de clusters formados, y refina el valor de epsilon según sea necesario.
-
-### Uso
-
-1. Define la variable `INITIAL_RUNS` con la ruta al archivo CSV que contiene los resultados de tus ejecuciones de clustering.
-2. Ejecuta el script. Esto analizará los resultados y generará configuraciones ajustadas.
-
-### Proceso de Afinación
-
-El script realiza los siguientes pasos:
-
-1. Lee los resultados de clustering de un archivo CSV.
-2. Analiza cada configuración en función del número de clusters formados.
-3. Ajusta el valor de epsilon:
-   - Si el número de clusters es menor que 2, reduce el valor de epsilon.
-   - Si el número de clusters es mayor que 2, aumenta el valor de epsilon.
-4. Genera y muestra las nuevas configuraciones.
 
 
 ## summary.py: Generador de Métricas y Gráficos

@@ -4,8 +4,6 @@ import pandas as pd
 import re
 
 
-INITIAL_RUNS = ''
-
 def get_new_config(configuration, scale):
     match = re.search(r'-E (\d+(\.\d+)?)', configuration)
     if match:
@@ -18,8 +16,8 @@ def get_new_config(configuration, scale):
         print(f"No epsilon found in configuration: {configuration}")
 
 
-def refine_epsilon():
-    df = pd.read_csv(INITIAL_RUNS)
+def refine_epsilon(df):
+    
     configurations_by_dataset = {}
     
     for index, row in df.iterrows():
@@ -39,3 +37,4 @@ def refine_epsilon():
             print(f"Original: {configuration}\nRefined Up: {new_config}\n")
 
     print(configurations_by_dataset)
+    return configurations_by_dataset
