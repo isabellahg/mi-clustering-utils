@@ -1,90 +1,19 @@
-to-generate/no-seeds/Report_2023-12-02_17-49-52.final refinement 1 (-50% epsilon).csv
-to-generate/no-seeds/Report_2023-12-02_18-33-21.final refinement 2.csv
-to-generate/no-seeds/Report_2023-12-02_18-42-08.final refinement 3.csv
-to-generate/no-seeds/Report_2023-12-02_18-48-15.final refinement 4.csv
-to-generate/no-seeds/Report_2023-12-02_18-58-12.final refinement 5.csv
-to-generate/no-seeds/Report_2023-12-02_20-30-41.final refinement 6.csv
-to-generate/no-seeds/Report_2023-12-02_21-55-32.final refinement 2 m and EM.csv
-to-generate/seeds/ED and M - all algos with seeds.final.csv
-to-generate/seeds/Hausdorff - all algos with seeds.csv
-generated-summary/boxplots_report.pdf
-generated-summary/summary.xlsx
-generated-summary/plots/db.png
-generated-summary/plots/dbcv.png
-generated-summary/plots/entropy.png
-generated-summary/plots/f1.png
-generated-summary/plots/precision.png
-generated-summary/plots/purity.png
-generated-summary/plots/rand_index.png
-generated-summary/plots/recall.png
-generated-summary/plots/s_dbw.png
-generated-summary/plots/specificity.png
-generated-summary/plots/time.png
-generated-summary/plots/xb.png
-generated-summary/all_executions.pdf
-generated-summary/ImageElephant-z5.pdf
-generated-summary/log.log
-generated-summary/musk1-z5.pdf
-generated-summary/mutagenesis3_atoms-z5.pdf
-generated-summary/Newsgroups1-z5.pdf
-generated-summary/plots/ImageElephant-z5/db.png
-generated-summary/plots/ImageElephant-z5/dbcv.png
-generated-summary/plots/ImageElephant-z5/entropy.png
-generated-summary/plots/ImageElephant-z5/f1.png
-generated-summary/plots/ImageElephant-z5/precision.png
-generated-summary/plots/ImageElephant-z5/purity.png
-generated-summary/plots/ImageElephant-z5/rand_index.png
-generated-summary/plots/ImageElephant-z5/recall.png
-generated-summary/plots/ImageElephant-z5/s_dbw.png
-generated-summary/plots/ImageElephant-z5/specificity.png
-generated-summary/plots/ImageElephant-z5/time.png
-generated-summary/plots/ImageElephant-z5/xb.png
-generated-summary/plots/Newsgroups1-z5/db.png
-generated-summary/plots/Newsgroups1-z5/dbcv.png
-generated-summary/plots/Newsgroups1-z5/entropy.png
-generated-summary/plots/Newsgroups1-z5/f1.png
-generated-summary/plots/Newsgroups1-z5/precision.png
-generated-summary/plots/Newsgroups1-z5/purity.png
-generated-summary/plots/Newsgroups1-z5/rand_index.png
-generated-summary/plots/Newsgroups1-z5/recall.png
-generated-summary/plots/Newsgroups1-z5/s_dbw.png
-generated-summary/plots/Newsgroups1-z5/specificity.png
-generated-summary/plots/Newsgroups1-z5/time.png
-generated-summary/plots/Newsgroups1-z5/xb.png
-generated-summary/plots/all_executions/db.png
-generated-summary/plots/all_executions/dbcv.png
-generated-summary/plots/all_executions/entropy.png
-generated-summary/plots/all_executions/f1.png
-generated-summary/plots/all_executions/precision.png
-generated-summary/plots/all_executions/purity.png
-generated-summary/plots/all_executions/rand_index.png
-generated-summary/plots/all_executions/recall.png
-generated-summary/plots/all_executions/s_dbw.png
-generated-summary/plots/all_executions/specificity.png
-generated-summary/plots/all_executions/time.png
-generated-summary/plots/all_executions/xb.png
-generated-summary/plots/musk1-z5/db.png
-generated-summary/plots/musk1-z5/dbcv.png
-generated-summary/plots/musk1-z5/entropy.png
-generated-summary/plots/musk1-z5/f1.png
-generated-summary/plots/musk1-z5/precision.png
-generated-summary/plots/musk1-z5/purity.png
-generated-summary/plots/musk1-z5/rand_index.png
-generated-summary/plots/musk1-z5/recall.png
-generated-summary/plots/musk1-z5/s_dbw.png
-generated-summary/plots/musk1-z5/specificity.png
-generated-summary/plots/musk1-z5/time.png
-generated-summary/plots/musk1-z5/xb.png
-generated-summary/plots/mutagenesis3_atoms-z5/db.png
-generated-summary/plots/mutagenesis3_atoms-z5/dbcv.png
-generated-summary/plots/mutagenesis3_atoms-z5/entropy.png
-generated-summary/plots/mutagenesis3_atoms-z5/f1.png
-generated-summary/plots/mutagenesis3_atoms-z5/precision.png
-generated-summary/plots/mutagenesis3_atoms-z5/purity.png
-generated-summary/plots/mutagenesis3_atoms-z5/rand_index.png
-generated-summary/plots/mutagenesis3_atoms-z5/recall.png
-generated-summary/plots/mutagenesis3_atoms-z5/s_dbw.png
-generated-summary/plots/mutagenesis3_atoms-z5/specificity.png
-generated-summary/plots/mutagenesis3_atoms-z5/time.png
-generated-summary/plots/mutagenesis3_atoms-z5/xb.png
-to-generate/no-seeds/Report_2023-12-03_19-04-01.final refinement newsgroup.csv
+generated-summary/*
+to-generate/*
+
+__pycache__/*
+.venv/etc/jupyter/nbconfig/notebook.d/
+
+__pycache__/
+
+
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
